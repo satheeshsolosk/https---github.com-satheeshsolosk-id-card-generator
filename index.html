@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id card generator</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+    <header>
+        <div class="bg-gray-800 text-white py-2.5 text-center font-bold">ID Card Generator</div>
+    </header>
+    <section>
+        <div id="body-container " class="lg:flex ">
+            <div class="w-2/4 ">
+                <div id="userdt" class="pt-10 lg:pl-16 pl-4">
+                    <div class="text-indigo-600 text-xl " >Enter User Details</div>
+                    <form>
+                        <div class=" flex flex-col w-60 mt-6 font-semibold">
+                        <label for="student-Name">Enter Name</label>
+                        <input type="text" 
+                        id="student-Name"
+                        placeholder="enter student name"
+                        class="border ">
+                        </div>
+                        <form>
+                            <div class=" flex flex-col w-60 mt-6 font-semibold">
+                            <label for="college-name">Enter College Name</label>
+                            <input type="text" 
+                            id="college-name"
+                            placeholder="Enter College name"
+                            class="border ">
+                            </div>
+                            <form>
+                                <div class=" flex flex-col w-60 mt-6 font-semibold">
+                                <label for="locationg">Enter Location</label>
+                                <input type="text" 
+                                id="locationg"
+                                placeholder="enter Location"
+                                class="border ">
+                                </div>
+                                <div class=" flex flex-col w-60 mt-6 font-semibold">
+                                    <label for="imagesk">upload file</label>
+                                <input type="file" 
+                                class="border"
+                                id="imagesk"
+                                onchange="previewImage(event)"/>
+                                </div>
+    
+                                <button  class="mt-4 bg-gray-800 text-white px-3 py-1 rounded"
+                                onclick="generateIdCard(event)">Generate card</button>
+                    </form>
+                </div>
+                </div>
+                <div id="sks" class="lg:pl-16 pl-4">
+                <div id="generate-id" class= w-2/4>
+                        <div id="userdt" class="pt-10 pl-16">
+        
+                <div  class="text-indigo-600 text-xl " id="generated-id">Generate ID Card</div>
+</div>
+<div id="id-generator" class="border border-black w-80  h-48 rounded flex flex-row ">
+    <div id="imagebg" class=" w-4/12">
+        <img  id="output-image"
+        alt="image"
+        class="center"/>
+        
+    </div>
+    
+   <div class="mt-4 w-8/12 pt-4 pl-3">
+    <div>
+        <span class=" mt-4 text-gray-500">Name:</span>
+        <span id="generated-name"></span>
+    </div>
+    <div class="mt-4">
+        <span class="text-gray-500">College Name:</span>
+        <span id="generated-col-name"></span>
+    </div>
+    <div class="mt-4">
+        <span class="text-gray-500">Location:</span>
+        <span id="tarlocation"></span>
+    </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+                
+        </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
